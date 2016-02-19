@@ -9,6 +9,7 @@
   tags: reboot
 
 - name: waiting for port after reboot
+  delegate_to: "{{ rolling_reboot_proxy_host }}"
   wait_for: host={{ inventory_hostname }} port={{ rolling_reboot_wait_port }} delay={{ rolling_reboot_wait_delay }} state=started
   connection: local
   sudo: false

@@ -9,3 +9,6 @@ rolling_reboot_wait_port: 22
 
 # wait 60 seconds before starting to poll
 rolling_reboot_wait_delay: 60
+
+# Host to use as jump server (ProxyCommand)
+rolling_reboot_proxy_host: 127.0.0.1
